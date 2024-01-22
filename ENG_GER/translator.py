@@ -103,8 +103,6 @@ def translate(lines,inp_tokenizer,tar_tokenizer,encoder,decoder,max_len=10):
     for input_tensor in input_tensors:
         translation, _ = predict_seq2seq(encoder, decoder, input_tensor, tar_tokenizer,10)
         translations.append(translation)
-    
-    print(translations) 
-    
+        
     return translations
 
